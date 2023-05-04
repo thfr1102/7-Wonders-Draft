@@ -33,19 +33,16 @@ a,
   }
 }
 
-.main-container {
-  place-items: center;
-}
-
 .div_button {
   text-align: center;
 }
 
 .player-list {
-  margin: 20px 10px;
+  margin: 20px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 175px;
+  width: 200px;
+  min-width: max-content;
   box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
@@ -53,16 +50,16 @@ a,
 }
 
 .player-name {
-  margin: 10px;
+  margin: 10px auto;
+  padding: 0 10px;
 }
 
 .object-list {
   list-style-type: none;
-  margin: 10px ;
-  padding-left: 5px;
+  padding-left: 5%;
 }
 
 .object-list li {
-  margin-bottom: 5px;
+  margin: 5%;
   font-size: 14px;
 }
