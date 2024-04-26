@@ -111,10 +111,14 @@ export default {
       }
     },
     addPlayer() {
-      this.playerNames.push("");
+      if (this.playerNames.length < 7) {
+        this.playerNames.push("");
+      }
     },
     removePlayer() {
-      this.playerNames.pop("");
+      if (this.playerNames.length > 3) {
+        this.playerNames.pop("");
+      }
     },
     // Adds Syracuse to the draft if playing Armada
     checkArmadaExpansion() {
