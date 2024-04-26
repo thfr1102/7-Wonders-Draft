@@ -24,13 +24,15 @@
           <label class="form-check-label" for="1e">One wonder each</label>
         </div>
       </div>
-      <div class="btn-group div_button" role="group">
-        <button @click="addPlayer" class="btn btn-success" type="button">
-          Add Player
-        </button>
-        <button @click="removePlayer" class="btn btn-danger" type="button">
-          Remove Player
-        </button>
+      <div class="div_button">
+        <div class="btn-group" role="group">
+          <button @click="addPlayer" class="btn btn-success" type="button">
+            Add Player
+          </button>
+          <button @click="removePlayer" class="btn btn-danger" type="button">
+            Remove Player
+          </button>
+        </div>
       </div>
       <div
         class="player-name"
