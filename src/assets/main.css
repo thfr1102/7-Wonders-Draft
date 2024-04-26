@@ -45,6 +45,7 @@ a,
 .div_button {
   text-align: center;
   margin-top: 15px;
+  display: inline-block;
 }
 
 .div_check_boxes {

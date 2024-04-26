@@ -21,7 +21,17 @@
             name="1e"
             v-model="oneEach"
           />
-          <label class="form-check-label" for="1e">One card each</label>
+          <label class="form-check-label" for="1e">One wonder each</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-center div_button">
+          <button @click="addPlayer" class="btn btn-success" type="button">
+            Add Player
+          </button>
+          <button @click="removePlayer" class="btn btn-danger" type="button">
+            Remove Player
+          </button>
         </div>
       </div>
       <div
@@ -36,11 +46,6 @@
           v-model="playerNames[playerIndex]"
         />
       </div>
-    </div>
-    <div class="div_button">
-      <button @click="addPlayer" class="btn btn-warning btn-lg" type="button">
-        Add Player
-      </button>
     </div>
     <div class="div_button">
       <button
