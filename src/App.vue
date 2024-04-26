@@ -24,7 +24,7 @@
           <label class="form-check-label" for="1e">One wonder each</label>
         </div>
       </div>
-      <div class="btn-group" role="group">
+      <div class="btn-group div_button" role="group">
         <button @click="addPlayer" class="btn btn-success" type="button">
           Add Player
         </button>
