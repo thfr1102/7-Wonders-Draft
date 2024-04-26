@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/7-Wonders-3p-Draft/',
+  base: '/7-Wonders-Draft/',
   plugins: [vue()],
   resolve: {
     alias: {
