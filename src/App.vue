@@ -24,15 +24,13 @@
           <label class="form-check-label" for="1e">One wonder each</label>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12 text-center div_button">
-          <button @click="addPlayer" class="btn btn-success" type="button">
-            Add Player
-          </button>
-          <button @click="removePlayer" class="btn btn-danger" type="button">
-            Remove Player
-          </button>
-        </div>
+      <div class="btn-group" role="group">
+        <button @click="addPlayer" class="btn btn-success" type="button">
+          Add Player
+        </button>
+        <button @click="removePlayer" class="btn btn-danger" type="button">
+          Remove Player
+        </button>
       </div>
       <div
         class="player-name"
@@ -129,6 +127,9 @@ export default {
     },
     addPlayer() {
       this.playerNames.push("");
+    },
+    removePlayer() {
+      this.playerNames.pop("");
     },
     checkArmadaExpansion() {
       if (this.armadaCheck) {
