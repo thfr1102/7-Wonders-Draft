@@ -127,10 +127,10 @@ export default {
     },
     checkArmadaExpansion() {
       if (this.armadaCheck) {
-        this.objectPool.push("Syrakus");
+        this.objectPool.push("Syracuse");
       } else {
-        if (this.objectPool.includes("Syrakus")) {
-          this.objectPool.splice(this.objectPool.indexOf("Syrakus"), 1);
+        if (this.objectPool.includes("Syracuse")) {
+          this.objectPool.splice(this.objectPool.indexOf("Syracuse"), 1);
         }
       }
     },
