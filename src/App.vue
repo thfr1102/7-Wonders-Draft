@@ -13,16 +13,6 @@
           />
           <label class="form-check-label" for="armada">Armada</label>
         </div>
-        <div class="1e_check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="1e"
-            name="1e"
-            v-model="oneEach"
-          />
-          <label class="form-check-label" for="1e">One wonder each</label>
-        </div>
       </div>
       <div class="div_button">
         <div class="btn-group" role="group">
@@ -110,20 +100,13 @@ export default {
       // Clear the drafted objects from the previous draft
       this.draftedObjects = [];
 
-      // Draft two objects for each player
+      // Draft objects for each player
       for (let i = 0; i < this.playerNames.length; i++) {
         let playerObjects = [];
-        if (this.oneEach) {
-          playerObjects = [
-            this.objectPool[indexArray[i]],
-            this.objectPool[indexArray[i + this.playerNames.length]],
-          ];
-        } else {
-          playerObjects = [
-            this.objectPool[indexArray[i * 2]],
-            this.objectPool[indexArray[i * 2 + 1]],
-          ];
-        }
+        playerObjects = [
+          this.objectPool[indexArray[i]],
+          this.objectPool[indexArray[i + this.playerNames.length]],
+        ];
         this.draftedObjects.push(playerObjects);
       }
     },
@@ -133,6 +116,7 @@ export default {
     removePlayer() {
       this.playerNames.pop("");
     },
+    // Adds Syracuse to the draft if playing Armada
     checkArmadaExpansion() {
       if (this.armadaCheck) {
         this.objectPool.push("Syracuse");
