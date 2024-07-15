@@ -70,6 +70,7 @@ export default {
       objectPool: [
         "Alexandria",
         "Babylon",
+	"Carthage",
         "Ephesus",
         "Giza",
         "Halicarnassus",
