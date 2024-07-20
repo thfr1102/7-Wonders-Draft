@@ -13,6 +13,17 @@
           />
           <label class="form-check-label" for="armada">Armada</label>
         </div>
+        <div class="edifice_check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="edifice"
+            name="edifice"
+            v-model="edificeCheck"
+            @change="checkEdificeExpansion"
+          />
+          <label class="form-check-label" for="edifice">Edifice</label>
+        </div>
       </div>
       <div class="div_button">
         <div class="btn-group" role="group">
@@ -128,6 +139,15 @@ export default {
       } else {
         if (this.objectPool.includes("Syracuse")) {
           this.objectPool.splice(this.objectPool.indexOf("Syracuse"), 1);
+        }
+      }
+    },
+    checkEdificeExpansion() {
+      if (this.edificeCheck) {
+        this.objectPool.push("Ur");
+      } else {
+        if (this.objectPool.includes("Ur")) {
+          this.objectPool.splice(this.objectPool.indexOf("Ur"), 1);
         }
       }
     },
