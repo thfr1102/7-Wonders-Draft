@@ -24,6 +24,17 @@
           />
           <label class="form-check-label" for="edifice">Edifice</label>
         </div>
+        <div class="cities_check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="cities"
+            name="cities"
+            v-model="citiesCheck"
+            @change="checkCitiesExpansion"
+          />
+          <label class="form-check-label" for="cities">Cities</label>
+        </div>
       </div>
       <div class="div_button">
         <div class="btn-group" role="group">
@@ -142,12 +153,27 @@ export default {
         }
       }
     },
+    // Adds Ur to the draft if playing Edifice
     checkEdificeExpansion() {
       if (this.edificeCheck) {
         this.objectPool.push("Ur");
       } else {
         if (this.objectPool.includes("Ur")) {
           this.objectPool.splice(this.objectPool.indexOf("Ur"), 1);
+        }
+      }
+    },
+    // Adds Byzantium and Petra to the draft if playing Cities
+    checkCitiesExpansion() {
+      if (this.citiesCheck) {
+        this.objectPool.push("Byzantium");
+        this.objectPool.push("Petra");
+      } else {
+        if (this.objectPool.includes("Byzantium")) {
+          this.objectPool.splice(this.objectPool.indexOf("Byzantium"), 1);
+        }
+        if (this.objectPool.includes("Petra")) {
+          this.objectPool.splice(this.objectPool.indexOf("Petra"), 1);
         }
       }
     },
