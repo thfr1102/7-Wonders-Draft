@@ -13,17 +13,6 @@
           />
           <label class="form-check-label" for="armada">Armada</label>
         </div>
-        <div class="edifice_check">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="edifice"
-            name="edifice"
-            v-model="edificeCheck"
-            @change="checkEdificeExpansion"
-          />
-          <label class="form-check-label" for="edifice">Edifice</label>
-        </div>
         <div class="cities_check">
           <input
             class="form-check-input"
@@ -35,14 +24,25 @@
           />
           <label class="form-check-label" for="cities">Cities</label>
         </div>
+        <div class="edifice_check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="edifice"
+            name="edifice"
+            v-model="edificeCheck"
+            @change="checkEdificeExpansion"
+          />
+          <label class="form-check-label" for="edifice">Edifice</label>
+        </div>
       </div>
       <div class="div_button">
         <div class="btn-group" role="group">
           <button @click="addPlayer" class="btn btn-success" type="button">
-            Add Player
+            +1 Player
           </button>
           <button @click="removePlayer" class="btn btn-danger" type="button">
-            Remove Player
+            -1 Player
           </button>
         </div>
       </div>
@@ -153,16 +153,6 @@ export default {
         }
       }
     },
-    // Adds Ur to the draft if playing Edifice
-    checkEdificeExpansion() {
-      if (this.edificeCheck) {
-        this.objectPool.push("Ur");
-      } else {
-        if (this.objectPool.includes("Ur")) {
-          this.objectPool.splice(this.objectPool.indexOf("Ur"), 1);
-        }
-      }
-    },
     // Adds Byzantium and Petra to the draft if playing Cities
     checkCitiesExpansion() {
       if (this.citiesCheck) {
@@ -174,6 +164,16 @@ export default {
         }
         if (this.objectPool.includes("Petra")) {
           this.objectPool.splice(this.objectPool.indexOf("Petra"), 1);
+        }
+      }
+    },
+    // Adds Ur to the draft if playing Edifice
+    checkEdificeExpansion() {
+      if (this.edificeCheck) {
+        this.objectPool.push("Ur");
+      } else {
+        if (this.objectPool.includes("Ur")) {
+          this.objectPool.splice(this.objectPool.indexOf("Ur"), 1);
         }
       }
     },
